@@ -14,7 +14,7 @@ public class Pattern {
         
         
         
-        
+        System.out.println();
         }
     public static void triangle(int rows){
             int number = 1;
@@ -30,6 +30,7 @@ public class Pattern {
                 System.out.println();
                 rows-=1;
             }
+            System.out.println();
         }
         
     public static void odds(int start){
@@ -40,19 +41,58 @@ public class Pattern {
             }
              System.out.println();
         }
-
+System.out.println();
     }
     public static void eo(int maxE){
+        int temp;
+        String letter = "O";
+       if(maxE%2==0){
+        letter="E";
+       }
+        for (int count = 0; count < maxE; count++){
+        for (temp = count; temp>0; temp--){
+        System.out.print(letter);
+      }
+       if(letter.equals("O")){
+        letter = "E";
+       }
+       else {
+        letter = "O";
+       }
+    
+       System.out.println();
+       temp += 2;
+        }
+ for (int count = maxE; count > 0; count--){
+        for (temp = count; temp>0; temp--){
+        System.out.print(letter);
+      }
+       if(letter.equals("O")){
+        letter = "E";
+       }
+       else {
+        letter = "O";
+       }
+    
+       System.out.println();
+       temp += 2;
+        }
+        }
+
+        public static void pyramid(int rows){
+            
 
 
 
-    }
+
+        }
     
         public static void main(String [] args){
         stars(7);
         triangle(9);
         odds(9);
         eo(6);
+        pyramid(5);
     }
 
 }
