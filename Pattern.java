@@ -5,7 +5,6 @@ public class Pattern {
 
         public static void stars(int rows){
             String star = "*";
-            //use while loops to print out rows
             while(rows>0){
                 System.out.println(star);
                 star += "**";
@@ -19,7 +18,6 @@ public class Pattern {
     public static void triangle(int rows){
             int number = 1;
             int numTemp = 1;
-            //use while loops to print out rows
             while(rows>0){
                 while (number>0){
                 System.out.print(numTemp);
@@ -34,14 +32,12 @@ public class Pattern {
         }
         
     public static void odds(int start){
-            //use for loops to print out rows
             for(int odd = start; odd > 0; odd -= 2){
              for(int count = 0; count < odd; count++){
                 System.out.print(odd);
             }
              System.out.println();
         }
-System.out.println();
     }
     public static void eo(int maxE){
         int temp;
@@ -77,11 +73,22 @@ System.out.println();
        System.out.println();
        temp += 2;
         }
+        System.out.println();
         }
 
         public static void pyramid(int rows){
+             int temp = 0;
+             for(int odd = 2*rows-1; odd > 0; odd -= 2){
+                temp++;
+                for(int space = 0; space < temp -1; space++){
+                    System.out.print(" ");
+                }
+             for(int count = 0; count < odd; count++){
+                System.out.print(temp);
+            }
+             System.out.println();
+             }
             
-
 
 
 
